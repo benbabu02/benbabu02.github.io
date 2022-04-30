@@ -1,280 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Victoria's Secret Home Page Example</title>
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <title>Victoria Secret</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="vs.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-				<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a> </div>
-				</li>
-				<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		</div>
-	</div>
-</nav>
-<div class="container mt-3">
-	<div class="row">
-		<div class="col-12">
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleControls" data-slide-to="1"></li>
-					<li data-target="#carouselExampleControls" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active"> <img class="d-block w-100" src="images/1920x500.gif" alt="First slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Item 1 Heading</h5>
-							<p>Item 1 Description</p>
-						</div>
-					</div>
-					<div class="carousel-item"> <img class="d-block w-100" src="images/1920x500.gif" alt="Second slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Item 2 Heading</h5>
-							<p>Item 2 Description</p>
-						</div>
-					</div>
-					<div class="carousel-item"> <img class="d-block w-100" src="images/1920x500.gif" alt="Third slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Item 3 Heading</h5>
-							<p>Item 3 Description</p>
-						</div>
-					</div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
-		</div>
-	</div>
-	<hr>
+<div class="main" id="main">
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <p>Victoria Secret</p>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <i class="fa fa-close" onclick="closeNav()"></i>
+            <ul>
+                <a href="#">
+                    <li>home</li>
+                </a>
+                <a href="#services">
+                    <li>services</li>
+                </a>
+                <a href="#products">
+                    <li>products</li>
+                </a>
+                <a href="index.html">
+                    <li>virtual fitting room</li>
+                </a>
+                <a class="fa fa-shopping-basket" href="#contact">
+                    <li></li>
+                </a>
+            </ul>
+            <div class="btn1">sign in</div>
+        </div>
+        <i class="fa fa-bars" onclick="show()"></i>
+    </div>
+    <div class="title">
+        <h1>Limited Time | Online Only<br>
+            <span> $35 Robes & $25 Slippers</span><br> <span> Free</span>
+            Self-Care Kit<br>With a $100 Purchase</h1>
+        <button type="button" class="btn">Shop Now</button>
+    </div>
+    <div class="pic_background">
+        <img src="images/042722-hp-35robesslippers-desktop.jpg" alt="image1"
+             class="pic">
+    </div>
+    <div class="down"><i class="fa fa-angle-double-down"></i></div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-4">
-			<div class="row">
-				<div class="col-2"><img class="rounded-circle" alt="Free Shipping" src="images/40X40.gif"></div>
-				<div class="col-lg-6 col-10 ml-1">
-					<h4>Free Shipping</h4>
-				</div>
-			</div>
-		</div>
-		<div class="col-4">
-			<div class="row">
-				<div class="col-2"><img class="rounded-circle" alt="Free Shipping" src="images/40X40.gif"></div>
-				<div class="col-lg-6 col-10 ml-1">
-					<h4>Free Returns</h4>
-				</div>
-			</div>
-		</div>
-		<div class="col-4">
-			<div class="row">
-				<div class="col-2"><img class="rounded-circle" alt="Free Shipping" src="images/40X40.gif"></div>
-				<div class="col-lg-6 col-10 ml-1">
-					<h4>Low Prices</h4>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="servicess">
+    <div class="product_headings">
+        <div class="product_line">
+            <p><span>More </span> Services</p>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 service-item" id="one" data-aos="fade-up">
+                    <div class="service-icon"><i class="fa fa-database"></i></div>
+                    <h4 class="service-title"><a href="#one">smartgift</a></h4>
+                    <p class="service-description"> With this new service, you
+                        can select up to five presents for the recipient to
+                        choose from. Then, they are able to enter their size,
+                        color, delivery address and more.</p>
+                </div>
+
+                <div class="col-md-4 service-item" id="two" data-aos="fade-up">
+                    <div class="service-icon"><i class="fa fa-shopping-bag"></i>
+                    </div>
+                    <h4 class="service-title"><a href="#two">buy online, pick up in store</a>
+                    </h4>
+                    <p class="service-description"> Shop our website and arrange to have the order sent to your local VS.</p>
+                </div>
+
+                <div class="col-md-4 service-item" id="three"
+                     data-aos="fade-up">
+                    <div class="service-icon"><i class="fa fa-heart"></i>
+                    </div>
+                    <h4 class="service-title"><a href="#three">the present that always fits</a></h4>
+                    <p class="service-description"> Give her what she really wants-a Victoria's Secret gift card and e-gift card.</p>
+                </div>
+
+                <div class="col-md-4 service-item" id="four" data-aos="fade-up">
+                    <div class="service-icon"><i class="fa fa-university"></i></div>
+                    <h4 class="service-title"><a href="#four">shop with klarna</a>
+                    </h4>
+                    <p class="service-description"> Purchase your presents with four interest-free payments.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="products">
+    <div class="product_headings">
+        <div class="product_line">
+            <p><span>trending</span> products</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel"
+             data-interval="9000">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/dress%20%231.jpg"
+                             alt="img">
+                        <div class="new text-center">
+                            <p>New</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Creamsicle Lace Dress</h6>
+                            <p class="card-text">$149</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/dress%232.jpg"
+                             alt="card-img">
+                        <div class="new text-center">
+                            <p>New</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Rose Embroidered Strappy Crotchless</h6>
+                            <p class="card-text">$89.95</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/dress%233.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Floral Embroidery Robe</h6>
+                            <p class="card-text">$119.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image4.jpg"
+                             alt="card-img">
+                        <div class="new text-center">
+                            <p>New</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Modal Lace-Trim Robe</h6>
+                            <p class="card-text">$69.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image5.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Fragrance Mists</h6>
+                            <p class="card-text">$19.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image6.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Short Cozy Robe</h6>
+                            <p class="card-text">$35.00</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image7.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Modal Short Pajama Set</h6>
+                            <p class="card-text">$64.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image8.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Sexy Tee Lace Push-Up Bra</h6>
+                            <p class="card-text">$39.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image9.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Bombshell Shine Strap Thong Panty</h6>
+                            <p class="card-text">$25 or any 2/$40</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img class="card-img-top img mx-auto d-block"
+                             src="images/image10.jpg"
+                             alt="card-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Lightweight Cotton Tank Maxi Sleepshirt</h6>
+                            <p class="card-text">$34.95</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample"
+               role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"
+                      aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExample"
+               role="button" data-slide="next">
+                <span class="carousel-control-next-icon"
+                      aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="center-div text-center" id="this" data-aos="zoom-in">
+        <a href="#this">Load More &rarr;</a>
+    </div>
+</section>
+<section>
+    <div class="product_headings">
+        <div class="product_line">
+            <p><span>best  </span> collections</p>
+        </div>
+    </div>
+    <div id="otheritems">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" data-aos="fade-left">
+                    <a class="item" id="anchor1"
+                       style="background-image: url('images/very sexy1.jpg');"
+                       href="#anchor1">
+                        <div class="details">
+                            <h4>Very Sexy</h4>
+                            <span>This category is dedicated to push-ups. Featuring lined and unlined styles.</span>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3" data-aos="fade-right">
+                    <a class="item" id="anchor2"
+                       style="background-image: url('images/dream.jpg');"
+                       href="#anchor2">
+                        <div class="details">
+                            <h4>Dream Angels</h4>
+                            <span>Featuring delicate details including hand-cut lace and embroidery.</span>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3" data-aos="fade-up-left">
+                    <a class="item" id="anchor3"
+                       style="background-image: url('images/tshirt.jpg');"
+                       href="#anchor3">
+                        <div class="details">
+                            <h4>T-Shirt</h4>
+                            <span>Comfortable, supportive, and nearly invisible under clothes. Featuring styles from wireless to push-up.</span>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3" data-aos="fade-up-right">
+                    <a class="item" id="anchor4"
+                       style="background-image: url('images/body.jpg');"
+                       href="#anchor4">
+                        <div class="details">
+                            <h4>Body By Victoria</h4>
+                            <span>Discover our best-selling styles featuring supersoft fabric. Memory Fit lining, and fully adjustable straps. Available in cup sizes A-G.</span>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="footer">
+    <div class="row">
+        <div class="column left">
+            <h3>contact us</h3>
+            <div class="first" data-aos="fade-up-right">
+                <div class="con">
+                    <div class="office"><i class="fa fa-paper-plane"></i></div>
+                    <h5>Main Branch<br><span>Ohio, United States</span>
+                    </h5>
+                </div>
+            </div>
+            <div class="first" data-aos="fade-up-left">
+                <div class="con">
+                    <div class="office"><i class="fa fa-info-circle"></i></div>
+                    <h5>  Help<br><span>Live Chat<br>Career</span>
+                    </h5>
+                </div>
+            </div>
+            <div class="first" data-aos="fade-up-right">
+                <div class="con">
+                    <div class="office"><i class="fa fa-envelope"></i></div>
+                    <h5>Email service<br><span style="text-transform: none;">vscustomer@victoriasecret.com</span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="column middle">
+            <h3>follow our story</h3>
+            <div class="gallery">
+                <figure class="gallery__item gallery__item-1"data-aos="fade-up">
+                    <img src="images/pic1.jpeg"class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item-2"data-aos="fade-up">
+                    <img src="images/pic2.jpeg"class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item-3"data-aos="fade-up">
+                    <img src="images/img3.jpg"class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item-7"data-aos="fade-up">
+                    <img src="images/pic4.jpg"class="gallery__img">
+                </figure>
+
+            </div>
+        </div>
+
+        <div class="column right">
+            <h3>quick links</h3>
+            <ul class="links text-center" data-aos="zoom-out">
+                <li><a href="#">home</a></li>
+                <li><a href="#servicess">services</a></li>
+                <li><a href="#products">products</a></li>
+                <li><a href="#offers">offers</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<a href="#main" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div class="loader">
+    <div class="text">Loading...</div>
+    <div class="load"></div>
 </div>
-<hr>
-<h2 class="text-center">RECOMMENDED PRODUCTS</h2>
-<hr>
-<div class="container">
-	<div class="row text-center">
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-	</div>
-	<div class="row text-center mt-4">
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-		<div class="col-md-4 pb-1 pb-md-0">
-			<div class="card"> <img class="card-img-top" src="images/400X200.gif" alt="Card image cap">
-				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a> </div>
-			</div>
-		</div>
-	</div>
-</div>
-<hr>
-<h2 class="text-center">FEATURED PRODUCTS</h2>
-<hr>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-4">
-			<ul class="list-unstyled">
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media my-4"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-			</ul>
-		</div>
-		<div class="col-lg-4">
-			<ul class="list-unstyled">
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media my-4"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-			</ul>
-		</div>
-		<div class="col-lg-4">
-			<ul class="list-unstyled">
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media my-4"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-				<li class="media"> <img class="mr-3" src="images/100X125.gif" alt="Generic placeholder image">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1">List-based media object</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<hr>
-<div class="container text-white bg-dark p-4">
-	<div class="row">
-		<div class="col-6 col-md-8 col-lg-7">
-			<div class="row text-center">
-				<div class="col-sm-6 col-md-4 col-lg-4 col-12">
-					<ul class="list-unstyled">
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-					</ul>
-				</div>
-				<div class="col-sm-6 col-md-4 col-lg-4 col-12">
-					<ul class="list-unstyled">
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-					</ul>
-				</div>
-				<div class="col-sm-6 col-md-4 col-lg-4 col-12">
-					<ul class="list-unstyled">
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-						<li class="btn-link"> <a>Link anchor</a> </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-lg-5 col-6">
-			<address>
-			<strong>MyStoreFront, Inc.</strong><br>
-			Indian Treasure Link<br>
-			Quitman, WA, 99110-0219<br>
-			<abbr title="Phone">P:</abbr> (123) 456-7890
-			</address>
-			<address>
-			<strong>Full Name</strong><br>
-			<a href="mailto:#">first.last@example.com</a>
-			</address>
-		</div>
-	</div>
-</div>
-<footer class="text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<p>Copyright © MyWebsite. All rights reserved.</p>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-3.4.1.min.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    eval(function (p, a, c, k, e, d) {
+        e = function (c) {
+            return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+        };
+        if (!''.replace(/^/, String)) {
+            while (c--) {
+                d[e(c)] = k[c] || e(c)
+            }
+            k = [function (e) {
+                return d[e]
+            }];
+            e = function () {
+                return '\\w+'
+            };
+            c = 1
+        }
+        ;
+        while (c--) {
+            if (k[c]) {
+                p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+            }
+        }
+        return p
+    }('2 k=O.D("C-B");3 z(){k.n.t="-y"}3 d(){k.n.t="0"}$(\'#u\').v(\'w.E.5\',3(e){2 $e=$(e.A);2 b=$e.G();2 9=4;2 l=$(\'.5-g\').H;7(b>=l-(9-1)){2 q=9-(l-b);I(2 i=0;i<q;i++){7(e.J=="F"){$(\'.5-g\').m(i).p(\'.5-o\')}f{$(\'.5-g\').m(0).p(\'.5-o\')}}}});$(3(){$(\'.a-8-c\').h();$(j).6(3(){2 6=$(j).L();7(6<=r){$(\'.a-8-c\').h()}f{$(\'.a-8-c\').d()}7(6<=r){$(\'.s\').d()}f $(\'.s\').h()});$(j).M(3(){$(".N").K("x")})})', 51, 51, '||var|function||carousel|scroll|if|to|itemsPerSlide|back|idx|top|show||else|item|hide||window|sh|totalItems|eq|style|inner|appendTo|it|100|down|right|carouselExample|on|slide|slow|200px|closeNav|relatedTarget|links|nav|getElementById|bs|left|index|length|for|direction|fadeOut|scrollTop|load|loader|document'.split('|'), 0, {}))
+    AOS.init({
+        easing: 'ease-out',
+        duration: 500,
+
+
+    });
+</script>
+
+
 </body>
 </html>

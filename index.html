@@ -1,179 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virtual Fitting Room</title>
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Fitting Room</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container"> <a class="navbar-brand" href="#">Victoria's Secret</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-					<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a> </div>
-					</li>
-					<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
-				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
-			</div>
-		</div>
-	</nav>
+<div class="main" id="main">
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <p>Victoria Secret</p>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <i class="fa fa-close" onclick="closeNav()"></i>
+            <ul>
+                <a href="home.html">
+                    <li>home</li>
+                </a>
+                <a href="home.html">
+                    <li>services</li>
+                </a>
+                <a href="#products">
+                    <li>products</li>
+                </a>
+                <a href="index.html">
+                    <li>virtual fitting room</li>
+                </a>
+                <a class="fa fa-shopping-basket" href="home.html">
+                    <li></li>
+                </a>
+            </ul>
+            <div class="btn1">sign in</div>
+        </div>
+        <i class="fa fa-bars" onclick="show()"></i>
+    </div>
 
-	<h1 class="text-center">Virtual Fitting Room</h1>
-	<div class="container">
-		<div class="row js_main main">
-			
-			<div class="col">
-				<div class="js_controls controls">
-					<h4>My Fit</h4>
-					<hr />
-				</div>
-				<div class="text-center">
-					<img id="product_recommendation" class="product_photo" alt="Recommended Product Photo" src="images/product-5.png">
-					<button onclick="recommendbra()" type="button" class="mybutton">Recommend</button>
-				</div>
-			</div>
-			
-			<div class="col-6 js_avatar avatar">
-			<div class="js_head head">
-				<div class="js_hair hair"></div>
-			</div>
-			<div class="js_neck neck"></div>
-			<div class="js_body body">
-				<div class="shoulders">
-					<div class="js_shoulder shoulder"></div>
-					<div class="js_shoulder shoulder"></div>
-				</div>
-				<div class="arms">
-					<div class="js_arm arm"></div>
-					<div class="js_arm arm"></div>
-				</div>
-				<div class="js_torso torso">
-					<img id="bra_display">
-				</div>
-				<div class="js_legs legs">
-					<div class="js_leg leg"></div>
-					<div class="js_leg leg"></div>
-				</div>
-				<div class="js_feet feet">
-					<div class="js_foot foot"></div>
-					<div class="js_foot foot"></div>
-				</div>
-			</div>
-			</div>
-			<div class="col table-wrapper-scroll-y product-display-list">
-			<h2 class="text-center">Bra Selection</h2>
-			<table class="table table-bordered table-striped mb-0">
-				<thead>
-					<tr>
-						<th scope="col">Recommended</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><img onclick="pushbra('1', 'images/product-5.png')" class="product_photo" alt="Product Photo" src="images/product-5.png"></td>
-					</tr> 
-					<tr>
-						<td><img onclick="pushbra('2', 'images/product-9.png')" class="product_photo" alt="Product Photo" src="images/product-9.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('3', 'images/product-D.png')" class="product_photo" alt="Product Photo" src="images/product-D.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('4', 'images/product-F.png')" class="product_photo" alt="Product Photo" src="images/product-F.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('5', 'images/product-51.png')" class="product_photo" alt="Product Photo" src="images/product-51.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('6', 'images/product-F2.png')" class="product_photo" alt="Product Photo" src="images/product-F2.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('7', 'images/product-8.png')" class="product_photo" alt="Product Photo" src="images/product-8.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('8', 'images/product-6.png')" class="product_photo" alt="Product Photo" src="images/product-6.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('9', 'images/product-B1.png')" class="product_photo" alt="Product Photo" src="images/product-B1.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('10', 'images/product-C.png')" class="product_photo" alt="Product Photo" src="images/product-C.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('11', 'images/product-E1.png')" class="product_photo" alt="Product Photo" src="images/product-E1.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('12', 'images/product-B.png')" class="product_photo" alt="Product Photo" src="images/product-B.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('13', 'images/product-F1.png')" class="product_photo" alt="Product Photo" src="images/product-F1.png"></td>
-					</tr>
-					<tr>
-						<td><img onclick="pushbra('14', 'images/product-E.png')" class="product_photo" alt="Product Photo" src="images/product-E.png"></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	</div>
+<h1 class="text-center">Virtual Fitting Room</h1>
+<div class="container">
+    <div class="row js_main main">
 
-	<div class="container text-center">
-		<button onclick="checkout()" type="button" class="mybutton">Checkout</button>
-	</div>
+        <div class="col">
+            <div class="js_controls controls">
+                <h4>My Fit</h4>
+                <hr />
+            </div>
+            <div class="text-center">
+                <img id="product_recommendation" class="product_photo" alt="Recommended Product Photo" src="images/product-5.png">
+                <button onclick="recommendbra()" type="button" class="mybutton">Recommend</button>
+            </div>
+        </div>
 
-	<footer class="text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<p>Copyright © MyWebsite. All rights reserved.</p>
-			</div>
-		</div>
-	</div>
+        <div class="col-6 js_avatar avatar">
+            <div class="js_head head">
+                <div class="js_hair hair"></div>
+            </div>
+            <div class="js_neck neck"></div>
+            <div class="js_body body">
+                <div class="shoulders">
+                    <div class="js_shoulder shoulder"></div>
+                    <div class="js_shoulder shoulder"></div>
+                </div>
+                <div class="arms">
+                    <div class="js_arm arm"></div>
+                    <div class="js_arm arm"></div>
+                </div>
+                <div class="js_torso torso">
+                    <img id="bra_display">
+                </div>
+                <div class="js_legs legs">
+                    <div class="js_leg leg"></div>
+                    <div class="js_leg leg"></div>
+                </div>
+                <div class="js_feet feet">
+                    <div class="js_foot foot"></div>
+                    <div class="js_foot foot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col table-wrapper-scroll-y product-display-list">
+            <h2 class="text-center">Bra Selection</h2>
+            <table class="table table-bordered table-striped mb-0">
+                <thead>
+                <tr>
+                    <th scope="col">Recommended</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><img onclick="pushbra('1', 'images/product-5.png')" class="product_photo" alt="Product Photo" src="images/product-5.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('2', 'images/product-9.png')" class="product_photo" alt="Product Photo" src="images/product-9.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('3', 'images/product-D.png')" class="product_photo" alt="Product Photo" src="images/product-D.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('4', 'images/product-F.png')" class="product_photo" alt="Product Photo" src="images/product-F.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('5', 'images/product-51.png')" class="product_photo" alt="Product Photo" src="images/product-51.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('6', 'images/product-F2.png')" class="product_photo" alt="Product Photo" src="images/product-F2.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('7', 'images/product-8.png')" class="product_photo" alt="Product Photo" src="images/product-8.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('8', 'images/product-6.png')" class="product_photo" alt="Product Photo" src="images/product-6.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('9', 'images/product-B1.png')" class="product_photo" alt="Product Photo" src="images/product-B1.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('10', 'images/product-C.png')" class="product_photo" alt="Product Photo" src="images/product-C.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('11', 'images/product-E1.png')" class="product_photo" alt="Product Photo" src="images/product-E1.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('12', 'images/product-B.png')" class="product_photo" alt="Product Photo" src="images/product-B.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('13', 'images/product-F1.png')" class="product_photo" alt="Product Photo" src="images/product-F1.png"></td>
+                </tr>
+                <tr>
+                    <td><img onclick="pushbra('14', 'images/product-E.png')" class="product_photo" alt="Product Photo" src="images/product-E.png"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <button onclick="checkout()" type="button" class="mybutton">Checkout</button>
+</div>
+
+<footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p>Copyright © MyWebsite. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script>
-	var current_product_number = 'nothing';
-	var thing1 = document.getElementById("js_skin_color") || '#EEDCCE';
-	
-	function pushbra(product_number, src) {
-		document.getElementById('bra_display').src=src;
-		current_product_number = product_number;
-	}	
-	
-	function checkout() {
-		alert("You have bra #" + current_product_number + " in your cart!");
-	}
-	
-	function recommendbra() {
-		var something = thing1[1];
-		var src = 'images/product-' + something + '.png'
-		document.getElementById('product_recommendation').src=src;
-		pushbra(something, src);
-	}
+    var current_product_number = 'nothing';
+    var thing1 = document.getElementById("js_skin_color") || '#EEDCCE';
 
-	function update_js_skin_color(selected_color) {
-		thing1 = selected_color.options[selected_color.selectedIndex].text
-	}
+    function pushbra(product_number, src) {
+        document.getElementById('bra_display').src=src;
+        current_product_number = product_number;
+    }
+
+    function checkout() {
+        alert("You have bra #" + current_product_number + " in your cart!");
+    }
+
+    function recommendbra() {
+        var something = thing1[1];
+        var src = 'images/product-' + something + '.png'
+        document.getElementById('product_recommendation').src=src;
+        pushbra(something, src);
+    }
+
+    function update_js_skin_color(selected_color) {
+        thing1 = selected_color.options[selected_color.selectedIndex].text
+    }
 </script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-3.4.1.min.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
 <script src="js/bootstrap-4.4.1.js"></script>
-<!-- Virtual Fitting Room --> 
+<!-- Virtual Fitting Room -->
 <script src="app.js" type="module"></script>
 </body>
 </html>
